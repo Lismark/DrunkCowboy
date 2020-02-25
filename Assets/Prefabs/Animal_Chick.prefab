@@ -346,10 +346,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3497085122746068481}
   - component: {fileID: 3497085122736475983}
-  - component: {fileID: 5505383655169777928}
   - component: {fileID: -3825960642888281285}
-  - component: {fileID: 4112856856688640331}
-  - component: {fileID: -4386864908495181810}
+  - component: {fileID: 3592039269558347790}
   m_Layer: 0
   m_Name: Animal_Chick
   m_TagString: Untagged
@@ -392,19 +390,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5505383655169777928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3497085122745890553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0aced6ab00b809945b8eaa636cc524a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!65 &-3825960642888281285
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -418,7 +403,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.3300116, y: 5.9417186, z: 6.7007303}
   m_Center: {x: -0, y: 3.027045, z: 0}
---- !u!114 &4112856856688640331
+--- !u!114 &3592039269558347790
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -427,24 +412,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3497085122745890553}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d9525f9fcb413d489d088b06317fdb4, type: 3}
+  m_Script: {fileID: 11500000, guid: 92fb59f650742a6458c9a731fcccdde2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 11400000, guid: 8b993b9e5af81724c9fb17f37d5ce068, type: 2}
   topBoundary: {fileID: 4904509690494133060, guid: f19a2955eae29d843ae0d3ad61f94c64,
     type: 3}
   downBoundary: {fileID: 2893688893763514038, guid: 63c62b8862685b947a362c97b4edc635,
     type: 3}
   explosion: {fileID: 1337198075554910, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4, type: 3}
---- !u!114 &-4386864908495181810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3497085122745890553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2765ccbc524bb164b9d4c1ed746c1e4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 15

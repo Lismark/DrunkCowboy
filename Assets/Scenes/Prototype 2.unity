@@ -1044,6 +1044,11 @@ PrefabInstance:
       propertyPath: borderRight
       value: 
       objectReference: {fileID: 1456872112}
+    - target: {fileID: 7037526477001060161, guid: f8abbdd178867d2419ba9feb6ff2cba0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8abbdd178867d2419ba9feb6ff2cba0, type: 3}
 --- !u!1 &475985833
@@ -1650,6 +1655,7 @@ GameObject:
   m_Component:
   - component: {fileID: 926245360}
   - component: {fileID: 926245359}
+  - component: {fileID: 2573235948458944989}
   m_Layer: 0
   m_Name: ScoreBoard
   m_TagString: Untagged
@@ -2308,3 +2314,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1982161267}
   m_CullTransparentMesh: 0
+--- !u!114 &2573235948458944989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926245358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062cb584281e39541bc9df2027d16abf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyController: {fileID: 0}
+  allScore: 0
+  currentScore: 0

@@ -912,10 +912,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2834588073702777771}
   - component: {fileID: 2834588073693282201}
-  - component: {fileID: 7716848354516333530}
   - component: {fileID: 1320661399588799325}
-  - component: {fileID: 2690109677454887897}
-  - component: {fileID: -1695305222552774897}
+  - component: {fileID: -1304358528162737435}
   m_Layer: 0
   m_Name: Animal_Fox_01
   m_TagString: Untagged
@@ -968,19 +966,6 @@ Animator:
   m_HasTransformHierarchy: 0
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7716848354516333530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2834588073702698481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0aced6ab00b809945b8eaa636cc524a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
 --- !u!65 &1320661399588799325
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -994,7 +979,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.080024414, y: 0.1985259, z: 0.24647914}
   m_Center: {x: 0, y: 0.098819375, z: 0.030020952}
---- !u!114 &2690109677454887897
+--- !u!114 &-1304358528162737435
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1003,27 +988,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2834588073702698481}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d9525f9fcb413d489d088b06317fdb4, type: 3}
+  m_Script: {fileID: 11500000, guid: 92fb59f650742a6458c9a731fcccdde2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 11400000, guid: 66abacbb11c5e2d4899a285188c73f97, type: 2}
   topBoundary: {fileID: 4904509690494133060, guid: f19a2955eae29d843ae0d3ad61f94c64,
     type: 3}
   downBoundary: {fileID: 2893688893763514038, guid: 63c62b8862685b947a362c97b4edc635,
     type: 3}
   explosion: {fileID: 1337198075554910, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4, type: 3}
---- !u!114 &-1695305222552774897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2834588073702698481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2765ccbc524bb164b9d4c1ed746c1e4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 20
 --- !u!1 &2834588073702699665
 GameObject:
   m_ObjectHideFlags: 0

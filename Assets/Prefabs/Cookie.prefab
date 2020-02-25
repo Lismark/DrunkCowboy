@@ -11,15 +11,13 @@ GameObject:
   - component: {fileID: 765401764740010777}
   - component: {fileID: 765401764743435065}
   - component: {fileID: 765401764742304249}
-  - component: {fileID: 765401765066176148}
   - component: {fileID: 6777679035597707212}
   - component: {fileID: 4072263559997216755}
   - component: {fileID: 3788579049710680841}
-  - component: {fileID: 7557713601584322870}
   - component: {fileID: -1824865277039559918}
   m_Layer: 0
   m_Name: Cookie
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,19 +83,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &765401765066176148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 765401764740370233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0aced6ab00b809945b8eaa636cc524a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 40
 --- !u!65 &6777679035597707212
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -139,19 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 062cb584281e39541bc9df2027d16abf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7557713601584322870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 765401764740370233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2765ccbc524bb164b9d4c1ed746c1e4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 0
+  enemyController: {fileID: 0}
 --- !u!114 &-1824865277039559918
 MonoBehaviour:
   m_ObjectHideFlags: 0

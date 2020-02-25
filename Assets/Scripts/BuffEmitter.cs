@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class BuffEmitter : MonoBehaviour
 {
-    public string buffType;
-    public float buffValue;
+    [SerializeField] Buffs buff;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -14,8 +13,15 @@ public class BuffEmitter : MonoBehaviour
     }
     private void Buff(Collider other)
     {
-        
+        other.transform.localScale *= buff.value;
         Destroy(gameObject);
+        StartCoroutine(Debuffer(other));
+    }
+
+    IEnumerator Debuffer(Collider other)
+    {
+        yield return new WaitForSeconds(buff.time);
+        other.transform.localScale = Vector3.one;
     }
 }
 

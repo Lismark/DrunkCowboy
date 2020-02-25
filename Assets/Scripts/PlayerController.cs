@@ -7,8 +7,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject bulletSpawnPoint;
     [SerializeField] private float fireRate;
+    [SerializeField] private float bulletSpeed;
     [SerializeField] Animator animator;
-    public float speed;
     public Transform borderLeft;
     public Transform borderRight;
     private float horizontalInput;
@@ -37,7 +37,8 @@ public class PlayerController : MonoBehaviour
 
     public void Shooting()
     {
-        Instantiate(bulletPrefab, bulletSpawnPoint.transform.position, Quaternion.identity);
+        var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.transform.position, Quaternion.identity);
         animator.SetTrigger("Throw");
+        bullet.GetComponent<Rigidbody>().AddForce(Vector3.forward * bulletSpeed, ForceMode.Impulse);
     }
 }           
