@@ -6,6 +6,8 @@ public class MobDestroyer : MonoBehaviour
 {
     [SerializeField] GameObject topBoundary;
     [SerializeField] GameObject downBoundary;
+    [SerializeField] GameObject explosion;
+    private GameObject explo;
     void Update()
     {
         if (transform.position.z > topBoundary.transform.position.z)
@@ -19,8 +21,9 @@ public class MobDestroyer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        explo = Instantiate(explosion, gameObject.transform.position, Quaternion.identity);
         Destroy(gameObject);
-        Destroy(other);
+        
     }
 
     public void MinusScore()
@@ -31,4 +34,8 @@ public class MobDestroyer : MonoBehaviour
         PlayerPrefs.SetInt("Score", currentScore - objectScore * 2);
     }
 
+    private void DestroyEffect()
+    {
+
+    }
 }

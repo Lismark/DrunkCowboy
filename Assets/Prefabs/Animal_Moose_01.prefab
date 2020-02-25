@@ -352,6 +352,7 @@ MonoBehaviour:
     type: 3}
   downBoundary: {fileID: 2893688893763514038, guid: 63c62b8862685b947a362c97b4edc635,
     type: 3}
+  explosion: {fileID: 1337198075554910, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4, type: 3}
 --- !u!114 &-3567044892338165664
 MonoBehaviour:
   m_ObjectHideFlags: 0
