@@ -914,6 +914,7 @@ GameObject:
   - component: {fileID: 2834588073693282201}
   - component: {fileID: 1320661399588799325}
   - component: {fileID: -1304358528162737435}
+  - component: {fileID: -4312195203996576051}
   m_Layer: 0
   m_Name: Animal_Fox_01
   m_TagString: Untagged
@@ -992,11 +993,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 11400000, guid: 66abacbb11c5e2d4899a285188c73f97, type: 2}
+  explosion: {fileID: 1337198075554910, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4, type: 3}
+--- !u!114 &-4312195203996576051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2834588073702698481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3330be823b32584f9d3762fd7989bf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   topBoundary: {fileID: 4904509690494133060, guid: f19a2955eae29d843ae0d3ad61f94c64,
     type: 3}
   downBoundary: {fileID: 2893688893763514038, guid: 63c62b8862685b947a362c97b4edc635,
     type: 3}
-  explosion: {fileID: 1337198075554910, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4, type: 3}
 --- !u!1 &2834588073702699665
 GameObject:
   m_ObjectHideFlags: 0

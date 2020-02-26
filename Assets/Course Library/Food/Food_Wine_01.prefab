@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7454861951018723725}
   m_Layer: 0
   m_Name: Food_Wine_01
-  m_TagString: Untagged
+  m_TagString: Buff
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,10 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 650542a0b42aa8147895efa2a43f46f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buffType: 
-  buffValue: 0
-  buffTime: 2
-  player: {fileID: 5429994263652737758, guid: 937e5aa4beaf663458b39a2136589f20, type: 3}
+  buff: {fileID: 11400000, guid: cc2bf012dc2ab914e9c8cdd1d85f1705, type: 2}
 --- !u!54 &69962874599330047
 Rigidbody:
   m_ObjectHideFlags: 0

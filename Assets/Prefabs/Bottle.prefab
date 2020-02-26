@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 7107398870980620430}
   - component: {fileID: 2472182563327702662}
   - component: {fileID: 400229251907850805}
+  - component: {fileID: 423917465416692522}
   m_Layer: 0
   m_Name: Bottle
-  m_TagString: Buff
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,6 +60,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buff: {fileID: 11400000, guid: cc2bf012dc2ab914e9c8cdd1d85f1705, type: 2}
+--- !u!114 &423917465416692522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7107398870980620416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3330be823b32584f9d3762fd7989bf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topBoundary: {fileID: 4904509690494133060, guid: f19a2955eae29d843ae0d3ad61f94c64,
+    type: 3}
+  downBoundary: {fileID: 2893688893763514038, guid: 63c62b8862685b947a362c97b4edc635,
+    type: 3}
 --- !u!1001 &2869034226707604059
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -114,17 +131,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2282332667155190041, guid: ca03aa5ab3af9f147aa60e7b8d131fe3,
-        type: 3}
-      propertyPath: buffTime
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2282332667155190041, guid: ca03aa5ab3af9f147aa60e7b8d131fe3,
-        type: 3}
-      propertyPath: buff
-      value: 
-      objectReference: {fileID: 11400000, guid: cc2bf012dc2ab914e9c8cdd1d85f1705,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca03aa5ab3af9f147aa60e7b8d131fe3, type: 3}
 --- !u!4 &2869034226708003035 stripped

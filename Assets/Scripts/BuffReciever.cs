@@ -7,18 +7,16 @@ public class BuffReciever : MonoBehaviour
     private float buffTime;
     private void OnTriggerEnter(Collider other)
     {
-        buffTime = other.GetComponent<BuffEmitter>().buff.time;
         if (other.CompareTag("Buff"))
         {
-            Debug.Log("UnBuff");
-            StartCoroutine(Debuffer());
+        StartCoroutine(Debuffer(other));
+        buffTime = other.GetComponent<BuffEmitter>().buff.time;
         }
 
     }
-    IEnumerator Debuffer()
+    IEnumerator Debuffer(Collider other)
     {
         yield return new WaitForSeconds(buffTime);
         transform.localScale = Vector3.one;
-        Destroy(gameObject);
     }
 }

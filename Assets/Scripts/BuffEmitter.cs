@@ -14,7 +14,7 @@ public class BuffEmitter : MonoBehaviour
     private void Buff(Collider other)
     {
         other.transform.localScale *= buff.value;
-        gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 
 

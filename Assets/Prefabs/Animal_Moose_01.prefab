@@ -258,6 +258,7 @@ GameObject:
   - component: {fileID: 4970955870611635176}
   - component: {fileID: 4533023434995647295}
   - component: {fileID: -5245764835411662796}
+  - component: {fileID: -1862428467747331318}
   m_Layer: 0
   m_Name: Animal_Moose_01
   m_TagString: Untagged
@@ -334,11 +335,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 11400000, guid: 5db17874be8e97c498c15980dbf2c4d4, type: 2}
+  explosion: {fileID: 1337198075554910, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4, type: 3}
+--- !u!114 &-1862428467747331318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4970955870602080502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3330be823b32584f9d3762fd7989bf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   topBoundary: {fileID: 4904509690494133060, guid: f19a2955eae29d843ae0d3ad61f94c64,
     type: 3}
   downBoundary: {fileID: 2893688893763514038, guid: 63c62b8862685b947a362c97b4edc635,
     type: 3}
-  explosion: {fileID: 1337198075554910, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4, type: 3}
 --- !u!1 &4970955870602084362
 GameObject:
   m_ObjectHideFlags: 0
