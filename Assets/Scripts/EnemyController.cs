@@ -10,17 +10,9 @@ public class EnemyController : MonoBehaviour
     [SerializeField] GameObject explosion;
     private GameObject explo;
 
-    void Update()
+    void FixedUpdate()
     {
-        transform.Translate(Vector3.forward * Time.deltaTime * enemy.speed);
-
-        if (transform.position.z > topBoundary.transform.position.z)
-            Destroy(gameObject);
-        else if (transform.position.z < downBoundary.transform.position.z)
-        {
-            MinusScore();
-            Destroy(gameObject);
-        }
+        Move();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -33,9 +25,20 @@ public class EnemyController : MonoBehaviour
     }
     public void MinusScore()
     {
-        var objectScore = GetComponent<Score>().score;
         var currentScore = PlayerPrefs.GetInt("Score");
 
-        PlayerPrefs.SetInt("Score", currentScore - objectScore * 2);
+        // PlayerPrefs.SetInt("Score", currentScore - objectScore * 2);
+    }
+    public void Move()
+    {
+        transform.Translate(Vector3.forward * Time.deltaTime * enemy.speed);
+
+        if (transform.position.z > topBoundary.transform.position.z)
+            Destroy(gameObject);
+        else if (transform.position.z < downBoundary.transform.position.z)
+        {
+            MinusScore();
+            Destroy(gameObject);
+        }
     }
 }

@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &5626565794022610032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2869034226707703035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2765ccbc524bb164b9d4c1ed746c1e4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 0
 --- !u!1 &7107398870980620416
 GameObject:
   m_ObjectHideFlags: 0
@@ -22,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7107398870980620430}
-  - component: {fileID: 5809066447752774474}
-  - component: {fileID: 6075685278887794022}
+  - component: {fileID: 2472182563327702662}
+  - component: {fileID: 400229251907850805}
   m_Layer: 0
   m_Name: Bottle
-  m_TagString: Untagged
+  m_TagString: Buff
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,7 +33,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &5809066447752774474
+--- !u!114 &2472182563327702662
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,15 +42,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7107398870980620416}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d9525f9fcb413d489d088b06317fdb4, type: 3}
+  m_Script: {fileID: 11500000, guid: 0aced6ab00b809945b8eaa636cc524a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  topBoundary: {fileID: 4904509690494133060, guid: f19a2955eae29d843ae0d3ad61f94c64,
-    type: 3}
-  downBoundary: {fileID: 2893688893763514038, guid: 63c62b8862685b947a362c97b4edc635,
-    type: 3}
-  explosion: {fileID: 1337198075554910, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4, type: 3}
---- !u!114 &6075685278887794022
+  speed: 10
+--- !u!114 &400229251907850805
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72,10 +55,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7107398870980620416}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2765ccbc524bb164b9d4c1ed746c1e4c, type: 3}
+  m_Script: {fileID: 11500000, guid: 650542a0b42aa8147895efa2a43f46f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
+  buff: {fileID: 11400000, guid: cc2bf012dc2ab914e9c8cdd1d85f1705, type: 2}
 --- !u!1001 &2869034226707604059
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -144,12 +127,6 @@ PrefabInstance:
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca03aa5ab3af9f147aa60e7b8d131fe3, type: 3}
---- !u!1 &2869034226707703035 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: ca03aa5ab3af9f147aa60e7b8d131fe3,
-    type: 3}
-  m_PrefabInstance: {fileID: 2869034226707604059}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2869034226708003035 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: ca03aa5ab3af9f147aa60e7b8d131fe3,

@@ -13,8 +13,6 @@ GameObject:
   - component: {fileID: 765401764742304249}
   - component: {fileID: 6777679035597707212}
   - component: {fileID: 4072263559997216755}
-  - component: {fileID: 3788579049710680841}
-  - component: {fileID: -1824865277039559918}
   m_Layer: 0
   m_Name: Cookie
   m_TagString: Bullet
@@ -112,33 +110,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3788579049710680841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 765401764740370233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 062cb584281e39541bc9df2027d16abf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyController: {fileID: 0}
---- !u!114 &-1824865277039559918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 765401764740370233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d9525f9fcb413d489d088b06317fdb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  topBoundary: {fileID: 4904509690494133060, guid: f19a2955eae29d843ae0d3ad61f94c64,
-    type: 3}
-  downBoundary: {fileID: 2893688893763514038, guid: 63c62b8862685b947a362c97b4edc635,
-    type: 3}
-  explosion: {fileID: 1337198075554910, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4, type: 3}
