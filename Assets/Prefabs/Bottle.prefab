@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7107398870980620430}
   - component: {fileID: 2472182563327702662}
   - component: {fileID: 9169998663227203336}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Bottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,6 +72,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: ca03aa5ab3af9f147aa60e7b8d131fe3, type: 3}
       propertyPath: m_Name
       value: Food_Wine_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ca03aa5ab3af9f147aa60e7b8d131fe3, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ca03aa5ab3af9f147aa60e7b8d131fe3, type: 3}
       propertyPath: m_LocalPosition.x

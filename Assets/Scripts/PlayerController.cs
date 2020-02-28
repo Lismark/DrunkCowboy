@@ -7,16 +7,24 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject bulletSpawnPoint;
     [SerializeField] private float fireRate;
-    [SerializeField] private float bulletSpeed;
     [SerializeField] Animator animator;
+    [SerializeField] int rateModifier;
+    public enum ShootingTypes
+    {
+        single, tripple, bigShot
+    }
+    public ShootingTypes shootingTypes;
+
+    public bool shooting = true;
     public Transform borderLeft;
     public Transform borderRight;
-    private float horizontalInput;
+    private float _horizontalInput;
+    private float nextFire;
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("Shooting", 0, fireRate);
+        
     }
 
     // Update is called once per frame
@@ -24,20 +32,57 @@ public class PlayerController : MonoBehaviour
     {
         Move();
         CheckBorders();
-        
+        switch (shootingTypes)
+        {
+            case ShootingTypes.single:
+                SimpleShot();
+                break;
+            case ShootingTypes.tripple:
+                TripleShot();
+                break;
+            case ShootingTypes.bigShot:
+                BigShot();
+                break;
+        }
     }
 
-    private void Shooting()
+
+    private void SimpleShot()
     {
+        if(shooting && Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
         var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.transform.position, Quaternion.identity);
         animator.SetTrigger("Throw");
-        bullet.GetComponent<Rigidbody>().AddForce(Vector3.forward * bulletSpeed, ForceMode.Impulse);
+        }
+    }
+
+    private void TripleShot()
+    {
+        if (shooting && Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            Instantiate(bulletPrefab, bulletSpawnPoint.transform.position, Quaternion.identity);
+            Instantiate(bulletPrefab, bulletSpawnPoint.transform.position, Quaternion.Euler(0,10,0));
+            Instantiate(bulletPrefab, bulletSpawnPoint.transform.position, Quaternion.Euler(0, -10, 0));
+            animator.SetTrigger("Throw");
+        }
+    }
+
+    private void BigShot()
+    {
+        if (shooting && Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.transform.position, Quaternion.identity);
+            bullet.transform.localScale = Vector3.one * rateModifier;
+            animator.SetTrigger("Throw");
+        }
     }
     private void Move()
     {
-        var mousePos = Camera.main.ScreenToViewportPoint(Input.mousePosition);
-        horizontalInput = Input.GetAxis("Horizontal");
-        transform.Translate(new Vector3(mousePos.x, transform.position.y, transform.position.z));
+        Vector2 mousePos = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+        transform.position = mousePos;
     }
     private void CheckBorders()
     {

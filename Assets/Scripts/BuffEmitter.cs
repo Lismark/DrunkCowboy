@@ -19,6 +19,7 @@ public class BuffEmitter : MonoBehaviour
     {
         other.transform.localScale *= buff.value;
         Instantiate(particle, transform.position, Quaternion.identity);
+
     }
 
 

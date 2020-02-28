@@ -933,8 +933,9 @@ MonoBehaviour:
     type: 3}
   bulletSpawnPoint: {fileID: 2078969943708472357}
   fireRate: 0.5
-  bulletSpeed: 100
   animator: {fileID: 0}
+  shootingTypes: 0
+  shooting: 0
   borderLeft: {fileID: 0}
   borderRight: {fileID: 0}
 --- !u!114 &1312267341521332083
