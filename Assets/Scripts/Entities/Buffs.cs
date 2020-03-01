@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
  [CreateAssetMenu(fileName = "newBuff", menuName = "Buffs/New buff")]
-public class Buffs : ScriptableObject
+public class Buffs: ScriptableObject
 {
-    public string type;
-    public string info;
-    public float value;
-    public float time;
-    public float speed;
+    public float buffTime = 2;
+    public float fireRateModifier = 1;
+    public float playerSizeModifier = 1;
+    public float bulletSizeModifier = 1;
+    public GameObject particleCollision;
 
     public enum ShootingTypes
     {

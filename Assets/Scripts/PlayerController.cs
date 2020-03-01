@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject bulletSpawnPoint;
     [SerializeField] private float fireRate;
     [SerializeField] Animator animator;
-    [SerializeField] int rateModifier;
 
     public bool shooting = true;
     public Transform borderLeft;
@@ -28,6 +27,10 @@ public class PlayerController : MonoBehaviour
     {
         Move();
         CheckBorders();
+  
+    }
+    private void Update()
+    {
         switch (shootingType)
         {
             case 0:
@@ -42,7 +45,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    
+
 
     private void SimpleShot()
     {
@@ -72,7 +75,7 @@ public class PlayerController : MonoBehaviour
         {
             nextFire = Time.time + fireRate;
             var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.transform.position, Quaternion.identity);
-            bullet.transform.localScale = Vector3.one * rateModifier;
+            bullet.transform.localScale = new Vector3(4,4,4);
             animator.SetTrigger("Throw");
         }
     }
@@ -80,7 +83,6 @@ public class PlayerController : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         transform.position = new Vector3(ray.origin.x, transform.position.y, transform.position.z);
-        Debug.Log(ray.origin.x);
     }
     private void CheckBorders()
     {

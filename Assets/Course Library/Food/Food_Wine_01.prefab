@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2282332667155190041}
   - component: {fileID: 69962874599330047}
   - component: {fileID: 7454861951018723725}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Food_Wine_01
   m_TagString: Buff
   m_Icon: {fileID: 0}
@@ -110,6 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buff: {fileID: 11400000, guid: cc2bf012dc2ab914e9c8cdd1d85f1705, type: 2}
   particle: {fileID: 1947871717301538, guid: a990e3ac1318b834488c784d851f42a9, type: 3}
+  objectBuffType: 0
 --- !u!54 &69962874599330047
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -4,31 +4,14 @@ using UnityEngine;
 
 public class BuffEmitter : MonoBehaviour
 {
-    [SerializeField] public Buffs buff;
-    [SerializeField] GameObject particle;
-    public int buffType;
+     public Buffs buff;
+    [HideInInspector] public GameObject particle;
+    [HideInInspector] public int objectBuffType;
 
     private void Start()
     {
-        buffType = (int)Buffs.ShootingTypes.tripple;
-        Debug.Log(buffType);
+        particle = buff.particleCollision;
+        objectBuffType = (int)buff.shootingTypes;
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            Buff(other);
-            Destroy(gameObject);
-        }
-    }
-    private void Buff(Collider other)
-    {
-        other.transform.localScale *= buff.value;
-        Instantiate(particle, transform.position, Quaternion.identity);
-
-    }
-
-
 }
 

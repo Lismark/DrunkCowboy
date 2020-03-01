@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbb49496b4d650d4ca6471658d3177a5, type: 3}
   m_Name: bigShot
   m_EditorClassIdentifier: 
-  type: 
-  info: 
-  value: 0
-  time: 0
-  speed: 0
-  shootingTypes: 0
+  buffTime: 2
+  fireRateModifier: 1
+  playerSizeModifier: 1
+  bulletSizeModifier: 1
+  particleCollision: {fileID: 1947871717301538, guid: a990e3ac1318b834488c784d851f42a9,
+    type: 3}
+  shootingTypes: 2

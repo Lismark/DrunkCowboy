@@ -6,18 +6,24 @@ public class BuffReciever : MonoBehaviour
 {
     private float buffTime;
     private PlayerController playerController;
+    private GameObject particle;
+
 
     private void Start()
     {
         playerController = GetComponent<PlayerController>();
+
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Buff"))
         {
-            var buffType = other.GetComponent<BuffEmitter>().buffType;
-            playerController.shootingType = buffType;
-            buffTime = other.GetComponent<BuffEmitter>().buff.time;
+            var buffEmitter = other.GetComponent<BuffEmitter>();
+            Debug.Log(buffEmitter.objectBuffType);
+            playerController.shootingType = buffEmitter.objectBuffType;
+            buffTime = buffEmitter.buff.buffTime;
+            Instantiate(buffEmitter.buff.particleCollision, transform.position, Quaternion.identity);
+            Destroy(other.gameObject);
             StartCoroutine(Debuffer(other));
         }
 

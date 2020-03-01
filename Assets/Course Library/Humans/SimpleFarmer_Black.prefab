@@ -418,11 +418,11 @@ MonoBehaviour:
   bulletSpawnPoint: {fileID: 6305825789390270517}
   fireRate: 0.5
   animator: {fileID: 9500000}
-  bulletSizeModifier: 10
-  shootingTypes: 0
+  sizeModifier: 4
   shooting: 1
   borderLeft: {fileID: 0}
   borderRight: {fileID: 0}
+  shootingType: 0
 --- !u!65 &1976186640
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -1136,6 +1136,7 @@ GameObject:
   - component: {fileID: 534669905}
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
+  - component: {fileID: 534669906}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1177,7 +1178,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 30
   field of view: 45
-  orthographic: 0
+  orthographic: 1
   orthographic size: 10
   m_Depth: -1
   m_CullingMask:
@@ -1208,6 +1209,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!95 &534669906
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e3e015eed1eec16408dafab2bda29278, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &539667132
 GameObject:
   m_ObjectHideFlags: 0
@@ -1825,11 +1845,11 @@ MonoBehaviour:
   - {fileID: 2834588073702698481, guid: b7b194565a369db49a93e6358ceddeed, type: 3}
   - {fileID: 4970955870602080502, guid: 9552a722070b2c84b919df37e7ba7c61, type: 3}
   - {fileID: 7107398870980620416, guid: bf663453b5ec4194ea9f9d99b3664c2c, type: 3}
-  - {fileID: 1180137445707430, guid: 84cd279dfc9ea0a4b8564030182915fa, type: 3}
+  - {fileID: 8051646946357606214, guid: aa5074574d17edf4a9adee789681c55f, type: 3}
   spawnRangeX: 4
   spawnPosZ: 16
   spawnDelay: 1
-  spawnInterval: 1.5
+  spawnInterval: 1
 --- !u!4 &1279909215
 Transform:
   m_ObjectHideFlags: 0

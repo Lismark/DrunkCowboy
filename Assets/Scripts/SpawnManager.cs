@@ -11,7 +11,7 @@ public class SpawnManager : MonoBehaviour
     }
     [SerializeField] private float spawnRangeX;
     [SerializeField] private float spawnPosZ;
-    [SerializeField] private float spawnDelay = 1f;
+    [SerializeField] private float spawnDelay = 0;
     [SerializeField] private float spawnInterval = 1.5f;
     void Start()
     {
