@@ -1044,8 +1044,7 @@ PrefabInstance:
       propertyPath: borderRight
       value: 
       objectReference: {fileID: 1456872112}
-    m_RemovedComponents:
-    - {fileID: 1172891985, guid: f8abbdd178867d2419ba9feb6ff2cba0, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8abbdd178867d2419ba9feb6ff2cba0, type: 3}
 --- !u!1 &475985833
 GameObject:
@@ -1826,6 +1825,7 @@ MonoBehaviour:
   - {fileID: 2834588073702698481, guid: b7b194565a369db49a93e6358ceddeed, type: 3}
   - {fileID: 4970955870602080502, guid: 9552a722070b2c84b919df37e7ba7c61, type: 3}
   - {fileID: 7107398870980620416, guid: bf663453b5ec4194ea9f9d99b3664c2c, type: 3}
+  - {fileID: 1180137445707430, guid: 84cd279dfc9ea0a4b8564030182915fa, type: 3}
   spawnRangeX: 4
   spawnPosZ: 16
   spawnDelay: 1

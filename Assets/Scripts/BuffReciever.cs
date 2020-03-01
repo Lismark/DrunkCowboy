@@ -15,7 +15,8 @@ public class BuffReciever : MonoBehaviour
     {
         if (other.CompareTag("Buff"))
         {
-            playerController.shootingTypes = PlayerController.ShootingTypes.tripple;
+            var buffType = other.GetComponent<BuffEmitter>().buffType;
+            playerController.shootingType = buffType;
             buffTime = other.GetComponent<BuffEmitter>().buff.time;
             StartCoroutine(Debuffer(other));
         }
@@ -26,6 +27,6 @@ public class BuffReciever : MonoBehaviour
 
         yield return new WaitForSeconds(buffTime);
         transform.localScale = Vector3.one;
-        playerController.shootingTypes = 0;
+        playerController.shootingType = 0;
     }
 }

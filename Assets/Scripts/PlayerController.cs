@@ -9,17 +9,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float fireRate;
     [SerializeField] Animator animator;
     [SerializeField] int rateModifier;
-    public enum ShootingTypes
-    {
-        single, tripple, bigShot
-    }
-    public ShootingTypes shootingTypes;
 
     public bool shooting = true;
     public Transform borderLeft;
     public Transform borderRight;
     private float _horizontalInput;
     private float nextFire;
+    public int shootingType;
 
     // Start is called before the first frame update
     void Start()
@@ -32,20 +28,21 @@ public class PlayerController : MonoBehaviour
     {
         Move();
         CheckBorders();
-        switch (shootingTypes)
+        switch (shootingType)
         {
-            case ShootingTypes.single:
+            case 0:
                 SimpleShot();
                 break;
-            case ShootingTypes.tripple:
+            case 1:
                 TripleShot();
                 break;
-            case ShootingTypes.bigShot:
+            case 2:
                 BigShot();
                 break;
         }
     }
 
+    
 
     private void SimpleShot()
     {
@@ -81,8 +78,9 @@ public class PlayerController : MonoBehaviour
     }
     private void Move()
     {
-        Vector2 mousePos = Camera.main.ScreenToViewportPoint(Input.mousePosition);
-        transform.position = mousePos;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        transform.position = new Vector3(ray.origin.x, transform.position.y, transform.position.z);
+        Debug.Log(ray.origin.x);
     }
     private void CheckBorders()
     {
@@ -92,4 +90,4 @@ public class PlayerController : MonoBehaviour
         if (transform.position.x >= borderRight.position.x)
             transform.position = new Vector3(borderRight.position.x, transform.position.y, transform.position.z);
     }
-}           
+}    

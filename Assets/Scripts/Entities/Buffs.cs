@@ -9,4 +9,10 @@ public class Buffs : ScriptableObject
     public float value;
     public float time;
     public float speed;
+
+    public enum ShootingTypes
+    {
+        single, tripple, bigShot
+    }
+    public ShootingTypes shootingTypes;
 }

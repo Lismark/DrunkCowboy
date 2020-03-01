@@ -6,6 +6,13 @@ public class BuffEmitter : MonoBehaviour
 {
     [SerializeField] public Buffs buff;
     [SerializeField] GameObject particle;
+    public int buffType;
+
+    private void Start()
+    {
+        buffType = (int)Buffs.ShootingTypes.tripple;
+        Debug.Log(buffType);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
