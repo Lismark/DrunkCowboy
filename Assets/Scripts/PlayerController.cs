@@ -16,13 +16,6 @@ public class PlayerController : MonoBehaviour
     private float nextFire;
     public int shootingType;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
         Move();
