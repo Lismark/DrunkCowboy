@@ -1,21 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ScoreDestroyer : MonoBehaviour
 {
 
-    private Transform destroyPoint;
+    public Transform destroyPoint;
     public float speed = 5;
 
-    private void Start()
-    {
-        destroyPoint = FindObjectOfType<scorePoint>().transform;
-    }
 
     private void Update()
     {
+        if (destroyPoint == null)
+        { return; }
         DestroyScore();
+
     }
     public void DestroyScore()
     {
@@ -26,6 +23,11 @@ public class ScoreDestroyer : MonoBehaviour
             Destroy(gameObject);
         }
         
+    }
+
+    public void Init(Transform destroyPoint)
+    {
+      this.destroyPoint = destroyPoint;
     }
 
 }

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class ScoreSpawner : MonoBehaviour
 {
@@ -9,10 +10,11 @@ public class ScoreSpawner : MonoBehaviour
 
     private void OnDestroy()
     {
-        for(int i = 0; i < pooCount; i++)
+
+        for (int i = 0; i < pooCount; i++)
         {
-            Instantiate(pooScore.scoreObject, gameObject.transform.position, Quaternion.identity);
+            Instantiate(pooScore.scoreObject, gameObject.transform.position, Quaternion.Euler(0, Random.Range(0,360), 0));
         }
-        
+
     }
 }
