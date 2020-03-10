@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 15
   speed: 10
+  scoresAmount: 2

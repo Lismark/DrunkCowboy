@@ -58,6 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa7a8c2d947e83f43a5547caa78f8e91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreObject: {fileID: 11400000, guid: 0881cc7904a90564b93653ae249e0d57, type: 2}
   destroyPoint: {fileID: 5100184008531216663, guid: 0b4c8fdda0c54d443b96f7d437ce442a,
     type: 3}
   speed: 5

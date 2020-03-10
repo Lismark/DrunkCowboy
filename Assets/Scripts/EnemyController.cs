@@ -24,7 +24,7 @@ public class EnemyController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Bullet"))
-            PlayerPrefs.SetInt("Score", PlayerPrefs.GetInt("Score") + enemy.score);
+            Destroy(other.gameObject);
 
         explo = Instantiate(explosion, gameObject.transform.position, Quaternion.identity);
         Destroy(gameObject);

@@ -1455,7 +1455,6 @@ GameObject:
   - component: {fileID: 591069331}
   - component: {fileID: 591069330}
   - component: {fileID: 591069329}
-  - component: {fileID: 591069328}
   m_Layer: 0
   m_Name: ScoreDestroyer
   m_TagString: DestroyPoint
@@ -1463,18 +1462,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &591069328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 591069327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c384db11d0e681e4d842a3c7b53746ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &591069329
 Rigidbody:
   m_ObjectHideFlags: 0

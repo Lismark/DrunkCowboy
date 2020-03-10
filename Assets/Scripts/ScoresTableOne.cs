@@ -5,6 +5,13 @@ using UnityEngine;
 public class ScoresTableOne : MonoBehaviour
 {
     [SerializeField] private Text scoreText;
+    [SerializeField] private GameObject scoresPanel;
+    private static Animator scoresAnimator;
+
+    private void Start()
+    {
+        scoresAnimator = scoresPanel.GetComponent<Animator>();
+    }
 
 
     public void FixedUpdate()
@@ -12,9 +19,9 @@ public class ScoresTableOne : MonoBehaviour
         scoreText.text = PlayerPrefs.GetInt("Score").ToString();
     }
 
-    public void AddScore()
+    public static void ScoresShaker()
     {
-        Debug.Log("Score added!");
+        scoresAnimator.SetTrigger("ScoreShake");
     }
 
 }

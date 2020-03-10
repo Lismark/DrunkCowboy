@@ -19,7 +19,6 @@ public class BuffReciever : MonoBehaviour
         if (other.CompareTag("Buff"))
         {
             var buffEmitter = other.GetComponent<BuffEmitter>();
-            Debug.Log(buffEmitter.objectBuffType);
             playerController.shootingType = buffEmitter.objectBuffType;
             buffTime = buffEmitter.buff.buffTime;
             Instantiate(buffEmitter.buff.particleCollision, transform.position, Quaternion.identity);

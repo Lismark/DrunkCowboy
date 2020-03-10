@@ -2,9 +2,17 @@
 
 public class ScoreDestroyer : MonoBehaviour
 {
+    [SerializeField] private Scores scoreObject;
+
 
     public Transform destroyPoint;
     public float speed = 5;
+    private int score;
+
+    private void Start()
+    {
+        score = scoreObject.scoreCount;
+    }
 
 
     private void Update()
@@ -23,6 +31,13 @@ public class ScoreDestroyer : MonoBehaviour
             Destroy(gameObject);
         }
         
+    }
+
+    private void OnDestroy()
+    {
+        var currentScore = PlayerPrefs.GetInt("Score");
+        PlayerPrefs.SetInt("Score", currentScore + score);
+        ScoresTableOne.ScoresShaker();
     }
 
     public void Init(Transform destroyPoint)
