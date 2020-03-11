@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db3875d871562964cb107be0ff30fcc5, type: 3}
-  m_Name: Chick
+  m_Script: {fileID: 11500000, guid: 276ffc3b46226344f9bd51f91e4752c6, type: 3}
+  m_Name: cracker
   m_EditorClassIdentifier: 
-  score: 5
-  speed: 5
-  scoresAmount: 1
-  health: 2
+  damage: 1
+  bulletPrefab: {fileID: 765401764740370233, guid: 7d3a8bfd1aeacb745a3e2636c7e84268,
+    type: 3}
+  speed: 10

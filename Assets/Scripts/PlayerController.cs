@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject[] bulletPrefabs;
     [SerializeField] private GameObject bulletSpawnPoint;
     [SerializeField] private float fireRate;
     [SerializeField] Animator animator;
 
+    public int currentBullet = 0;
     public bool shooting = true;
     public Transform borderLeft;
     public Transform borderRight;
@@ -36,6 +37,7 @@ public class PlayerController : MonoBehaviour
                 BigShot();
                 break;
         }
+
     }
 
 
@@ -45,7 +47,7 @@ public class PlayerController : MonoBehaviour
         if(shooting && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
-        var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.transform.position, Quaternion.identity);
+        var bullet = Instantiate(bulletPrefabs[currentBullet], bulletSpawnPoint.transform.position, Quaternion.identity);
         animator.SetTrigger("Throw");
         }
     }
@@ -55,9 +57,9 @@ public class PlayerController : MonoBehaviour
         if (shooting && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
-            Instantiate(bulletPrefab, bulletSpawnPoint.transform.position, Quaternion.identity);
-            Instantiate(bulletPrefab, bulletSpawnPoint.transform.position, Quaternion.Euler(0,10,0));
-            Instantiate(bulletPrefab, bulletSpawnPoint.transform.position, Quaternion.Euler(0, -10, 0));
+            Instantiate(bulletPrefabs[currentBullet], bulletSpawnPoint.transform.position, Quaternion.identity);
+            Instantiate(bulletPrefabs[currentBullet], bulletSpawnPoint.transform.position, Quaternion.Euler(0,10,0));
+            Instantiate(bulletPrefabs[currentBullet], bulletSpawnPoint.transform.position, Quaternion.Euler(0, -10, 0));
             animator.SetTrigger("Throw");
         }
     }
@@ -67,7 +69,7 @@ public class PlayerController : MonoBehaviour
         if (shooting && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
-            var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.transform.position, Quaternion.identity);
+            var bullet = Instantiate(bulletPrefabs[currentBullet], bulletSpawnPoint.transform.position, Quaternion.identity);
             bullet.transform.localScale = new Vector3(4,4,4);
             animator.SetTrigger("Throw");
         }

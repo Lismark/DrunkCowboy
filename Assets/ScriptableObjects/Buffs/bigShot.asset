@@ -18,4 +18,5 @@ MonoBehaviour:
   bulletSizeModifier: 1
   particleCollision: {fileID: 1947871717301538, guid: a990e3ac1318b834488c784d851f42a9,
     type: 3}
+  damageModifier: 2
   shootingTypes: 2

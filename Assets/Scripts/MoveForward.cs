@@ -6,7 +6,7 @@ public class MoveForward : MonoBehaviour
 {
     [SerializeField] private float speed;
 
-    void Update()
+    void FixedUpdate()
     {
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }

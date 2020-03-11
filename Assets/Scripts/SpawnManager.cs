@@ -12,7 +12,7 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private float spawnRangeX;
     [SerializeField] private float spawnPosZ;
     [SerializeField] private float spawnDelay = 0;
-    [SerializeField] private float spawnInterval = 1.5f;
+    [SerializeField] private float spawnInterval = 2f;
     void Start()
     {
         InvokeRepeating("SpawnRandomAnimal", spawnDelay, spawnInterval);

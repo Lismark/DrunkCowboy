@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Moose
   m_EditorClassIdentifier: 
   score: 25
-  speed: 15
+  speed: 10
   scoresAmount: 5
+  health: 2

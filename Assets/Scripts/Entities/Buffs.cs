@@ -9,6 +9,7 @@ public class Buffs: ScriptableObject
     public float playerSizeModifier = 1;
     public float bulletSizeModifier = 1;
     public GameObject particleCollision;
+    public int damageModifier;
 
     public enum ShootingTypes
     {

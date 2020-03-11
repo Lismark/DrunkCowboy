@@ -21,6 +21,7 @@ public class ScoresTableOne : MonoBehaviour
 
     public static void ScoresShaker()
     {
+        if(scoresAnimator != null)
         scoresAnimator.SetTrigger("ScoreShake");
     }
 

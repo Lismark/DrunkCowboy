@@ -8,4 +8,5 @@ public class Enemies : ScriptableObject
     public int score;
     public float speed = 1f;
     public int scoresAmount;
+    public int health;
 }

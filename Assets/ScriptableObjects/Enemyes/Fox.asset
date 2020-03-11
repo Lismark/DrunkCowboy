@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Fox
   m_EditorClassIdentifier: 
   score: 15
-  speed: 10
+  speed: 7
   scoresAmount: 2
+  health: 3
