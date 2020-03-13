@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db3875d871562964cb107be0ff30fcc5, type: 3}
   m_Name: Fox
   m_EditorClassIdentifier: 
-  score: 15
   speed: 7
-  scoresAmount: 2
+  scoresAmountDrop: 2
   health: 3
+  damage: 15

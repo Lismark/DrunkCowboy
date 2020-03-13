@@ -9,6 +9,7 @@ TagManager:
   - Buff
   - Score
   - DestroyPoint
+  - Enemy
   layers:
   - Default
   - TransparentFX

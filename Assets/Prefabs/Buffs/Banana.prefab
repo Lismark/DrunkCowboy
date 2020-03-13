@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7899760328781322914}
-  - component: {fileID: -6542704657220185547}
   - component: {fileID: -4299681813560264751}
+  - component: {fileID: 8588456808291122300}
+  - component: {fileID: 8140896129238372953}
   m_Layer: 12
   m_Name: Banana
   m_TagString: Buff
@@ -33,22 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &-6542704657220185547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8051646946357606214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3330be823b32584f9d3762fd7989bf9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  topBoundary: {fileID: 4904509690494133060, guid: f19a2955eae29d843ae0d3ad61f94c64,
-    type: 3}
-  downBoundary: {fileID: 2893688893763514038, guid: 63c62b8862685b947a362c97b4edc635,
-    type: 3}
 --- !u!114 &-4299681813560264751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,6 +47,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+--- !u!114 &8588456808291122300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8051646946357606214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 650542a0b42aa8147895efa2a43f46f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buff: {fileID: 11400000, guid: 69482871a24b72242ac5a67d2d8d037c, type: 2}
+  particle: {fileID: 0}
+  objectBuffType: 0
+  borders: {fileID: 11400000, guid: 44322527b2a417445a4923f748d8bb12, type: 2}
+--- !u!65 &8140896129238372953
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8051646946357606214}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.9236126, z: 1}
+  m_Center: {x: -0, y: 0.99303794, z: -0}
 --- !u!1001 &1860352168808157445
 PrefabInstance:
   m_ObjectHideFlags: 0

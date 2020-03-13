@@ -353,7 +353,6 @@ GameObject:
   - component: {fileID: 9500000}
   - component: {fileID: 603167889}
   - component: {fileID: 1976186640}
-  - component: {fileID: 4931393319616924479}
   - component: {fileID: 1172891986}
   - component: {fileID: 5577489886212728949}
   m_Layer: 0
@@ -418,12 +417,13 @@ MonoBehaviour:
   - {fileID: 765401764740370233, guid: 7d3a8bfd1aeacb745a3e2636c7e84268, type: 3}
   - {fileID: 100000, guid: 06cdf427476835b42837c1ca7f8cdbd1, type: 3}
   bulletSpawnPoint: {fileID: 6305825789390270517}
-  fireRate: 0.5
   animator: {fileID: 9500000}
+  playerType: {fileID: 11400000, guid: 4edba9c1e8ddd3f42aa595da5134095f, type: 2}
+  healthBarSlider: {fileID: 0}
+  penaltyMultiplyer: 2
+  borders: {fileID: 11400000, guid: 44322527b2a417445a4923f748d8bb12, type: 2}
   currentBullet: 0
   shooting: 1
-  borderLeft: {fileID: 0}
-  borderRight: {fileID: 0}
   shootingType: 0
 --- !u!65 &1976186640
 BoxCollider:
@@ -438,18 +438,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5999776, y: 2.8532972, z: 1}
   m_Center: {x: 0, y: 1.4358659, z: 0}
---- !u!114 &4931393319616924479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd24a93c165dfb6468ee62a10535d2e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &1172891986
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -478,6 +466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd24a93c165dfb6468ee62a10535d2e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buffDamage: 0
 --- !u!1 &100974
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db3875d871562964cb107be0ff30fcc5, type: 3}
   m_Name: Chick
   m_EditorClassIdentifier: 
-  score: 5
   speed: 5
-  scoresAmount: 1
+  scoresAmountDrop: 1
   health: 2
+  damage: 10

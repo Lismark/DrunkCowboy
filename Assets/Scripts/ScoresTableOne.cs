@@ -6,15 +6,15 @@ public class ScoresTableOne : MonoBehaviour
 {
     [SerializeField] private Text scoreText;
     [SerializeField] private GameObject scoresPanel;
+    [SerializeField] private GameObject playerHealthBar;
+    [SerializeField] private Player player;
+    private float playerMaxHealth;
+    private float playerHealthBarValue;
     private static Animator scoresAnimator;
 
-    private void Start()
-    {
-        scoresAnimator = scoresPanel.GetComponent<Animator>();
-    }
 
 
-    public void FixedUpdate()
+    public void Update()
     {
         scoreText.text = PlayerPrefs.GetInt("Score").ToString();
     }

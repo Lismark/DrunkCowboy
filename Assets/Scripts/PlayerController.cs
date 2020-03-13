@@ -1,21 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private GameObject[] bulletPrefabs;
     [SerializeField] private GameObject bulletSpawnPoint;
-    [SerializeField] private float fireRate;
     [SerializeField] Animator animator;
+    [SerializeField] Player playerType;
+    [SerializeField] GameObject healthBarSlider;
+    [SerializeField] private int penaltyMultiplyer = 2;
+    [SerializeField] Borders borders;
 
     public int currentBullet = 0;
     public bool shooting = true;
-    public Transform borderLeft;
-    public Transform borderRight;
+    public int shootingType;
     private float _horizontalInput;
     private float nextFire;
-    public int shootingType;
+    private float hpSliderValue;
+    private float maxHealth;
+
+    private void Start()
+    {
+        hpSliderValue = healthBarSlider.GetComponent<Slider>().value;
+        maxHealth = playerType.health;
+    }
 
     void FixedUpdate()
     {
@@ -46,7 +56,7 @@ public class PlayerController : MonoBehaviour
     {
         if(shooting && Time.time > nextFire)
         {
-            nextFire = Time.time + fireRate;
+            nextFire = Time.time + playerType.fireRate;
         var bullet = Instantiate(bulletPrefabs[currentBullet], bulletSpawnPoint.transform.position, Quaternion.identity);
         animator.SetTrigger("Throw");
         }
@@ -56,7 +66,7 @@ public class PlayerController : MonoBehaviour
     {
         if (shooting && Time.time > nextFire)
         {
-            nextFire = Time.time + fireRate;
+            nextFire = Time.time + playerType.fireRate;
             Instantiate(bulletPrefabs[currentBullet], bulletSpawnPoint.transform.position, Quaternion.identity);
             Instantiate(bulletPrefabs[currentBullet], bulletSpawnPoint.transform.position, Quaternion.Euler(0,10,0));
             Instantiate(bulletPrefabs[currentBullet], bulletSpawnPoint.transform.position, Quaternion.Euler(0, -10, 0));
@@ -68,7 +78,7 @@ public class PlayerController : MonoBehaviour
     {
         if (shooting && Time.time > nextFire)
         {
-            nextFire = Time.time + fireRate;
+            nextFire = Time.time + playerType.fireRate;
             var bullet = Instantiate(bulletPrefabs[currentBullet], bulletSpawnPoint.transform.position, Quaternion.identity);
             bullet.transform.localScale = new Vector3(4,4,4);
             animator.SetTrigger("Throw");
@@ -81,10 +91,17 @@ public class PlayerController : MonoBehaviour
     }
     private void CheckBorders()
     {
-        if (transform.position.x <= borderLeft.position.x)
-            transform.position = new Vector3(borderLeft.position.x, transform.position.y, transform.position.z);
+        if (transform.position.x <= borders.leftBorder)
+            transform.position = new Vector3(borders.leftBorder, transform.position.y, transform.position.z);
 
-        if (transform.position.x >= borderRight.position.x)
-            transform.position = new Vector3(borderRight.position.x, transform.position.y, transform.position.z);
+        if (transform.position.x >= borders.rightBorder)
+            transform.position = new Vector3(borders.rightBorder, transform.position.y, transform.position.z);
     }
+
+    //public void MinusScore()
+    //{
+    //    var currentScore = PlayerPrefs.GetInt("Score");
+    //    if (transform.position.z < ObjectDestroyer.DownBoundary)
+    //        PlayerPrefs.SetInt("Score", currentScore - enemy.damage * penaltyMultiplyer);
+    //}
 }    

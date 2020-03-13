@@ -521,10 +521,9 @@ GameObject:
   - component: {fileID: -3825960642888281285}
   - component: {fileID: 3592039269558347790}
   - component: {fileID: -6058697410059769734}
-  - component: {fileID: 3834345323671053902}
   m_Layer: 0
   m_Name: Animal_Chick
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -592,8 +591,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 11400000, guid: 8b993b9e5af81724c9fb17f37d5ce068, type: 2}
   explosion: {fileID: 1337198075554910, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4, type: 3}
-  penaltyMultiplyer: 2
   healthBar: {fileID: 3431108777484129567}
+  pooScore: {fileID: 11400000, guid: 0881cc7904a90564b93653ae249e0d57, type: 2}
 --- !u!114 &-6058697410059769734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -606,20 +605,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3330be823b32584f9d3762fd7989bf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3834345323671053902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3497085122745890553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 737af494d4f1c1642871f97e1bbb02f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pooScore: {fileID: 11400000, guid: 0881cc7904a90564b93653ae249e0d57, type: 2}
-  enemy: {fileID: 11400000, guid: 8b993b9e5af81724c9fb17f37d5ce068, type: 2}
+  player: {fileID: 11400000, guid: 4edba9c1e8ddd3f42aa595da5134095f, type: 2}
+  borders: {fileID: 11400000, guid: 44322527b2a417445a4923f748d8bb12, type: 2}
 --- !u!1 &6026156855260836650
 GameObject:
   m_ObjectHideFlags: 0

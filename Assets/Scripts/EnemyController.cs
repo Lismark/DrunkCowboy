@@ -5,12 +5,11 @@ using UnityEngine.UI;
 
 public class EnemyController : MonoBehaviour
 {
-    [SerializeField] private Enemies enemy;
+    [SerializeField] public Enemies enemy;
     [SerializeField] private GameObject explosion;
-    [SerializeField] private int penaltyMultiplyer = 2;
     [SerializeField] private Slider healthBar;
+    [SerializeField] private Scores pooScore;
     private GameObject explo;
-    private float downBoundary;
     private int fullHealth;
     private int currentHealth;
     private int damageModifier; 
@@ -18,16 +17,13 @@ public class EnemyController : MonoBehaviour
 
     private void Start()
     {
-        downBoundary = ObjectDestroyer.DownBoundary;
         fullHealth = enemy.health;
         currentHealth = fullHealth;
         damageModifier = FindObjectOfType<BuffReciever>().buffDamage;
-        Debug.Log(gameObject.name + fullHealth);
     }
     void FixedUpdate()
     {
         Move();
-        MinusScore();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -42,16 +38,23 @@ public class EnemyController : MonoBehaviour
 
         explo = Instantiate(explosion, gameObject.transform.position, Quaternion.identity);
         if(currentHealth <= 0)
-        Destroy(gameObject);
-    }
-    public void MinusScore()
-    {
-        var currentScore = PlayerPrefs.GetInt("Score");
-        if (transform.position.z < downBoundary)
-            PlayerPrefs.SetInt("Score", currentScore - enemy.score * penaltyMultiplyer);
+        {
+            SpawnScores();
+            Destroy(gameObject);
+        }
     }
     public void Move()
     {
         transform.Translate(Vector3.forward * Time.deltaTime * enemy.speed);
+    }
+
+    private void SpawnScores()
+    {
+        for (int i = 0; i < enemy.scoresAmountDrop; i++)
+        {
+            Instantiate(pooScore.scoreObject, new Vector3(gameObject.transform.position.x + Random.Range(0, 1f),
+                gameObject.transform.position.y, gameObject.transform.position.z + Random.Range(0, 1f)),
+                Quaternion.Euler(0, Random.Range(0, 360), 0));
+        }
     }
 }

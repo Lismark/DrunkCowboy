@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db3875d871562964cb107be0ff30fcc5, type: 3}
-  m_Name: Moose
+  m_Script: {fileID: 11500000, guid: f04eb053a8aa5ea43afb01ede4b21cbe, type: 3}
+  m_Name: Borders
   m_EditorClassIdentifier: 
-  speed: 10
-  scoresAmountDrop: 3
-  health: 2
-  damage: 20
+  topBorder: 23
+  downBorder: -3
+  leftBorder: -4.16
+  rightBorder: 4.16
