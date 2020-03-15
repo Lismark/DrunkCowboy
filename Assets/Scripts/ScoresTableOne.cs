@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class ScoresTableOne : MonoBehaviour
 {
-    [SerializeField] private Text scoreText;
-    [SerializeField] private GameObject scoresPanel;
-    [SerializeField] private GameObject playerHealthBar;
-    [SerializeField] private Player player;
-    private float playerMaxHealth;
-    private float playerHealthBarValue;
+    [SerializeField] private GameObject scores;
+    [SerializeField] private Text scoresText;
     private static Animator scoresAnimator;
 
-
+    private void Start()
+    {
+        scoresAnimator = scores.GetComponent<Animator>();
+    }
 
     public void Update()
     {
-        scoreText.text = PlayerPrefs.GetInt("Score").ToString();
+        scoresText.text = PlayerPrefs.GetInt("Score").ToString();
     }
 
     public static void ScoresShaker()

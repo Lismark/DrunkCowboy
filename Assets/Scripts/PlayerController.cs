@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         hpSliderValue = healthBarSlider.GetComponent<Slider>().value;
-        maxHealth = playerType.health;
+        maxHealth = playerType.maxHealth;
     }
 
     void FixedUpdate()

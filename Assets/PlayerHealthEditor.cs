@@ -5,25 +5,28 @@ public class PlayerHealthEditor : MonoBehaviour
 {
     [SerializeField] private Slider slider;
     [SerializeField] private Player player;
-    private float playerMaxHealth;
+    [SerializeField] GameObject healthBar;
+    private Animator animator;
 
     private void Start()
     {
-        playerMaxHealth = player.health;
+        animator = healthBar.GetComponent<Animator>();
     }
 
     private void Update()
     {
         EditHealth();
+        animator.SetInteger("hp", player.currentHealth);
     }
 
     private void EditHealth()
     {
-        if (player.health < 0)
+        if (player.currentHealth < 0)
         {
-            player.health = 0;
-            Time.timeScale = 0;
+            player.currentHealth = 0;
+            Time.timeScale = Mathf.Lerp(1f,0f, .1f * Time.deltaTime);   // постепенно замедляет время // таймскейл лучше вынести в скриптабл
         }
-        slider.value = player.health / playerMaxHealth;
+        Debug.Log(Time.timeScale);
+        slider.value = (float)player.currentHealth / (float)player.maxHealth;
     }
 }

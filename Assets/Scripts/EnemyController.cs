@@ -9,6 +9,8 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private GameObject explosion;
     [SerializeField] private Slider healthBar;
     [SerializeField] private Scores pooScore;
+    [SerializeField] private Borders borders;
+    [SerializeField] private Player player;
     private GameObject explo;
     private int fullHealth;
     private int currentHealth;
@@ -24,6 +26,7 @@ public class EnemyController : MonoBehaviour
     void FixedUpdate()
     {
         Move();
+        BottomDestroy();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -55,6 +58,18 @@ public class EnemyController : MonoBehaviour
             Instantiate(pooScore.scoreObject, new Vector3(gameObject.transform.position.x + Random.Range(0, 1f),
                 gameObject.transform.position.y, gameObject.transform.position.z + Random.Range(0, 1f)),
                 Quaternion.Euler(0, Random.Range(0, 360), 0));
+        }
+    }
+
+    private void BottomDestroy()
+    {
+        if (transform.position.z < borders.downBorder)
+        {
+            if (gameObject.CompareTag("Enemy"))
+            {
+                player.currentHealth -= enemy.damage;
+            }
+            Destroy(gameObject);
         }
     }
 }
