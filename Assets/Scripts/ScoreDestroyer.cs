@@ -2,7 +2,6 @@
 
 public class ScoreDestroyer : MonoBehaviour
 {
-    [SerializeField] private Scores scoreObject;
 
 
     public Transform destroyPoint;
@@ -11,7 +10,7 @@ public class ScoreDestroyer : MonoBehaviour
 
     private void Start()
     {
-        score = scoreObject.scoreCount;
+        score = gameObject.GetComponent<DropObject>().score;
     }
 
 

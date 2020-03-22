@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8971783093367351383}
   - component: {fileID: 6197720905676489309}
   - component: {fileID: 1098706494482865605}
+  - component: {fileID: 2802158759942473928}
   m_Layer: 13
   m_Name: Poo
   m_TagString: Score
@@ -62,6 +63,20 @@ MonoBehaviour:
   destroyPoint: {fileID: 5100184008531216663, guid: 0b4c8fdda0c54d443b96f7d437ce442a,
     type: 3}
   speed: 5
+--- !u!114 &2802158759942473928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4938577417423673666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e99ce51be9d042469a7b96f80888391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 1
+  weight: 1
 --- !u!54 &4050803299117642608
 Rigidbody:
   m_ObjectHideFlags: 0
