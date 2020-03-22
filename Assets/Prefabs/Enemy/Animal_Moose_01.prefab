@@ -482,6 +482,7 @@ GameObject:
   - component: {fileID: 4970955870611635176}
   - component: {fileID: 4533023434995647295}
   - component: {fileID: -5245764835411662796}
+  - component: {fileID: -7424938425284455278}
   m_Layer: 0
   m_Name: Animal_Moose_01
   m_TagString: Enemy
@@ -558,12 +559,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92fb59f650742a6458c9a731fcccdde2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 11400000, guid: 5db17874be8e97c498c15980dbf2c4d4, type: 2}
-  explosion: {fileID: 1337198075554910, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4, type: 3}
   healthBar: {fileID: 3381195054306378302}
-  pooScore: {fileID: 11400000, guid: 0881cc7904a90564b93653ae249e0d57, type: 2}
+  pooScore: {fileID: 0}
   borders: {fileID: 11400000, guid: 44322527b2a417445a4923f748d8bb12, type: 2}
   player: {fileID: 11400000, guid: 4edba9c1e8ddd3f42aa595da5134095f, type: 2}
+--- !u!114 &-7424938425284455278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4970955870602080502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aae268d47de1a44d886481de08b7973, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 3
+  enemyName: Moose
+  spawnChanceWeigth: 2
+  damage: 25
+  speed: 10
+  scoresAmountDrop: 3
+  health: 2
+  onDestroyEmitter: {fileID: 1337198075554910, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4,
+    type: 3}
+  dropObjects:
+  - {fileID: 2802158759942473928, guid: ff643b911da7ddd4591244c85743b401, type: 3}
 --- !u!1 &4970955870602084362
 GameObject:
   m_ObjectHideFlags: 0

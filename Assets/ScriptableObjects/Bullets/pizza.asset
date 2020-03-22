@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 276ffc3b46226344f9bd51f91e4752c6, type: 3}
   m_Name: pizza
   m_EditorClassIdentifier: 
-  damage: 3
+  damage: 2
   bulletPrefab: {fileID: 100000, guid: 06cdf427476835b42837c1ca7f8cdbd1, type: 3}
   speed: 20

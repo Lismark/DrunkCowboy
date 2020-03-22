@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private int penaltyMultiplyer = 2;
     [SerializeField] Borders borders;
 
-    public int currentBullet = 0;
+    public int currentBulletType = 0;
     public bool shooting = true;
     public int shootingType;
     private float _horizontalInput;
@@ -49,15 +49,12 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-
-
-
     private void SimpleShot()
     {
         if(shooting && Time.time > nextFire)
         {
             nextFire = Time.time + playerType.fireRate;
-        var bullet = Instantiate(bulletPrefabs[currentBullet], bulletSpawnPoint.transform.position, Quaternion.identity);
+        var bullet = Instantiate(bulletPrefabs[currentBulletType], bulletSpawnPoint.transform.position, Quaternion.identity);
         animator.SetTrigger("Throw");
         }
     }
@@ -67,9 +64,9 @@ public class PlayerController : MonoBehaviour
         if (shooting && Time.time > nextFire)
         {
             nextFire = Time.time + playerType.fireRate;
-            Instantiate(bulletPrefabs[currentBullet], bulletSpawnPoint.transform.position, Quaternion.identity);
-            Instantiate(bulletPrefabs[currentBullet], bulletSpawnPoint.transform.position, Quaternion.Euler(0,10,0));
-            Instantiate(bulletPrefabs[currentBullet], bulletSpawnPoint.transform.position, Quaternion.Euler(0, -10, 0));
+            Instantiate(bulletPrefabs[currentBulletType], bulletSpawnPoint.transform.position, Quaternion.identity);
+            Instantiate(bulletPrefabs[currentBulletType], bulletSpawnPoint.transform.position, Quaternion.Euler(0,10,0));
+            Instantiate(bulletPrefabs[currentBulletType], bulletSpawnPoint.transform.position, Quaternion.Euler(0, -10, 0));
             animator.SetTrigger("Throw");
         }
     }
@@ -79,7 +76,7 @@ public class PlayerController : MonoBehaviour
         if (shooting && Time.time > nextFire)
         {
             nextFire = Time.time + playerType.fireRate;
-            var bullet = Instantiate(bulletPrefabs[currentBullet], bulletSpawnPoint.transform.position, Quaternion.identity);
+            var bullet = Instantiate(bulletPrefabs[currentBulletType], bulletSpawnPoint.transform.position, Quaternion.identity);
             bullet.transform.localScale = new Vector3(4,4,4);
             animator.SetTrigger("Throw");
         }
@@ -97,11 +94,4 @@ public class PlayerController : MonoBehaviour
         if (transform.position.x >= borders.rightBorder)
             transform.position = new Vector3(borders.rightBorder, transform.position.y, transform.position.z);
     }
-
-    //public void MinusScore()
-    //{
-    //    var currentScore = PlayerPrefs.GetInt("Score");
-    //    if (transform.position.z < ObjectDestroyer.DownBoundary)
-    //        PlayerPrefs.SetInt("Score", currentScore - enemy.damage * penaltyMultiplyer);
-    //}
 }    

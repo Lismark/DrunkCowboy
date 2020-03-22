@@ -870,7 +870,6 @@ GameObject:
   - component: {fileID: 5429994263652449982}
   - component: {fileID: 5429994263662252400}
   - component: {fileID: 5429994263135664257}
-  - component: {fileID: 1312267341521332083}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -929,31 +928,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c2f2f396dce1d646985f5671e25c925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 765401764740370233, guid: 7d3a8bfd1aeacb745a3e2636c7e84268,
-    type: 3}
+  bulletPrefabs: []
   bulletSpawnPoint: {fileID: 2078969943708472357}
-  fireRate: 0.5
   animator: {fileID: 0}
+  playerType: {fileID: 0}
+  healthBarSlider: {fileID: 0}
+  penaltyMultiplyer: 2
+  borders: {fileID: 11400000, guid: 44322527b2a417445a4923f748d8bb12, type: 2}
+  currentBullet: 0
   shooting: 0
-  borderLeft: {fileID: 0}
-  borderRight: {fileID: 0}
   shootingType: 0
---- !u!114 &1312267341521332083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5429994263652737758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3330be823b32584f9d3762fd7989bf9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  topBoundary: {fileID: 4904509690494133060, guid: f19a2955eae29d843ae0d3ad61f94c64,
-    type: 3}
-  downBoundary: {fileID: 2893688893763514038, guid: 63c62b8862685b947a362c97b4edc635,
-    type: 3}
 --- !u!1 &5429994263652740734
 GameObject:
   m_ObjectHideFlags: 0

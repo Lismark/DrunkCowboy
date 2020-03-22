@@ -4,24 +4,39 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    [SerializeField] private GameObject[] prefabsAnimals;
-    public GameObject[] PrefabAnimals 
-    {
-        get { return prefabsAnimals; }
-    }
     [SerializeField] private float spawnRangeX;
     [SerializeField] private float spawnPosZ;
-    [SerializeField] private float spawnDelay = 0;
-    [SerializeField] private float spawnInterval = 2f;
+    [SerializeField] float spawnRate;
+    [SerializeField] private Enemy[] enemies; 
     void Start()
     {
-        InvokeRepeating("SpawnRandomAnimal", spawnDelay, spawnInterval);
+        InvokeRepeating("SpawnRandomEnemy", 1, spawnRate);
+        Randomizer();
     }
 
-    void SpawnRandomAnimal()
+    void SpawnRandomEnemy()
     {
-        int animalIndex = Random.Range(0, prefabsAnimals.Length);
-        Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
-        Instantiate(prefabsAnimals[animalIndex], spawnPos, prefabsAnimals[animalIndex].transform.rotation);
+        int animalIndex = Randomizer();
+        if (animalIndex > 0)
+        {
+            Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
+            Instantiate(enemies[animalIndex-1], spawnPos, enemies[animalIndex-1].transform.rotation);
+        }
     }
+
+    private int Randomizer()
+    {
+        List<int> table = new List<int>();
+        for (int i = 0; i < enemies.Length; i++) 
+        {
+            for(int j = 0; j < enemies[i].spawnChanceWeigth; j++) 
+            {
+                table.Add(enemies[i].index);
+            } 
+        }
+            
+        int randomItem = Random.Range(0, table.Count);
+        return table[randomItem];
+    }
+
 }

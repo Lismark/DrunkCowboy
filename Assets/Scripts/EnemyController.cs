@@ -5,28 +5,37 @@ using UnityEngine.UI;
 
 public class EnemyController : MonoBehaviour
 {
-    [SerializeField] public Enemies enemy;
-    [SerializeField] private GameObject explosion;
     [SerializeField] private Slider healthBar;
     [SerializeField] private Scores pooScore;
     [SerializeField] private Borders borders;
     [SerializeField] private Player player;
-    private GameObject explo;
+
     private int fullHealth;
-    private int currentHealth;
-    private int damageModifier; 
+    private int enemyHealth;
+    private int damageModifier;
+    private Enemy enemy;
 
 
+    private void Awake()
+    {
+        enemy = gameObject.GetComponent<Enemy>();
+    }
     private void Start()
     {
+
         fullHealth = enemy.health;
-        currentHealth = fullHealth;
+        enemyHealth = fullHealth;
         damageModifier = FindObjectOfType<BuffReciever>().buffDamage;
     }
     void FixedUpdate()
     {
         Move();
         BottomDestroy();
+        if (enemyHealth <= 0)
+        {
+            SpawnScores();
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -34,17 +43,11 @@ public class EnemyController : MonoBehaviour
         if (other.CompareTag("Bullet"))
         {
             var damage = other.GetComponent<Bullet>().bulletEntity.damage;
-            currentHealth -=  damage;
-            healthBar.value = ((float)currentHealth / (float)fullHealth);
-            Destroy(other.gameObject);
+            enemyHealth -=  damage;
+            //Debug.Log($"enemy name: {gameObject.name} bullet damage: {damage}, enemy health: {enemyHealth}");
+            healthBar.value = ((float)enemyHealth / (float)fullHealth);
         }
-
-        explo = Instantiate(explosion, gameObject.transform.position, Quaternion.identity);
-        if(currentHealth <= 0)
-        {
-            SpawnScores();
-            Destroy(gameObject);
-        }
+        Instantiate(enemy.onDestroyEmitter, gameObject.transform.position, Quaternion.identity);
     }
     public void Move()
     {
@@ -55,7 +58,7 @@ public class EnemyController : MonoBehaviour
     {
         for (int i = 0; i < enemy.scoresAmountDrop; i++)
         {
-            Instantiate(pooScore.scoreObject, new Vector3(gameObject.transform.position.x + Random.Range(0, 1f),
+            Instantiate(enemy.dropObjects[0], new Vector3(gameObject.transform.position.x + Random.Range(0, 1f),
                 gameObject.transform.position.y, gameObject.transform.position.z + Random.Range(0, 1f)),
                 Quaternion.Euler(0, Random.Range(0, 360), 0));
         }

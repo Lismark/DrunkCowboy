@@ -1086,6 +1086,7 @@ GameObject:
   - component: {fileID: 2834588073693282201}
   - component: {fileID: 1320661399588799325}
   - component: {fileID: -1304358528162737435}
+  - component: {fileID: -3305031189748573486}
   m_Layer: 0
   m_Name: Animal_Fox_01
   m_TagString: Enemy
@@ -1164,12 +1165,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92fb59f650742a6458c9a731fcccdde2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 11400000, guid: 66abacbb11c5e2d4899a285188c73f97, type: 2}
-  explosion: {fileID: 1337198075554910, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4, type: 3}
   healthBar: {fileID: 2186973088593688262}
-  pooScore: {fileID: 11400000, guid: 0881cc7904a90564b93653ae249e0d57, type: 2}
+  pooScore: {fileID: 0}
   borders: {fileID: 11400000, guid: 44322527b2a417445a4923f748d8bb12, type: 2}
   player: {fileID: 11400000, guid: 4edba9c1e8ddd3f42aa595da5134095f, type: 2}
+--- !u!114 &-3305031189748573486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2834588073702698481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aae268d47de1a44d886481de08b7973, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 2
+  enemyName: Fox
+  spawnChanceWeigth: 3
+  damage: 15
+  speed: 7
+  scoresAmountDrop: 2
+  health: 1
+  onDestroyEmitter: {fileID: 1337198075554910, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4,
+    type: 3}
+  dropObjects:
+  - {fileID: 2802158759942473928, guid: ff643b911da7ddd4591244c85743b401, type: 3}
 --- !u!1 &2834588073702699665
 GameObject:
   m_ObjectHideFlags: 0

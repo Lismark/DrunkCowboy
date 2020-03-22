@@ -16,6 +16,12 @@ public class Bullet : MonoBehaviour
     {
         TopDestroyer();
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Enemy"))
+        Destroy(gameObject);
+    }
     public void TopDestroyer()
     {
         if (transform.position.z > borders.topBorder)

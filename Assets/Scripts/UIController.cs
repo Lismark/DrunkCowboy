@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine;
 
@@ -10,7 +11,6 @@ public class UIController : MonoBehaviour
     public void PauseMenu()
     {
         menu.SetActive(true);
-        pauseButton.SetActive(false);
         Time.timeScale = 0;
     }
 
@@ -23,12 +23,17 @@ public class UIController : MonoBehaviour
 
     public void Quit()
     {
-        Application.Quit();
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void ResetScore()
     {
         PlayerPrefs.SetInt("Score", 0);
-        scoresText.text = "0";
+    }
+
+    public void lvl_load()
+    {
+        SceneManager.LoadScene("Lvl_1");
+        Time.timeScale = 1;
     }
 }
