@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DropObject : MonoBehaviour
+public class DropScore : MonoBehaviour
 {
     public int score;
     public int weight;

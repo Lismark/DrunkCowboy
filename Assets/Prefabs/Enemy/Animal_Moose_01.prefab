@@ -577,15 +577,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 3
   enemyName: Moose
-  spawnChanceWeigth: 2
+  spawnChanceWeigth: 3
   damage: 25
   speed: 10
-  scoresAmountDrop: 3
+  scoresAmountDrop: 5
   health: 2
   onDestroyEmitter: {fileID: 1337198075554910, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4,
     type: 3}
+  dropBoxChance: 5
+  dropHealthChance: 15
   dropObjects:
-  - {fileID: 2802158759942473928, guid: ff643b911da7ddd4591244c85743b401, type: 3}
+  - {fileID: 4938577417423673666, guid: ff643b911da7ddd4591244c85743b401, type: 3}
+  - {fileID: 5257097877811037726, guid: 3386f5f2726190b42b687d500231fd94, type: 3}
 --- !u!1 &4970955870602084362
 GameObject:
   m_ObjectHideFlags: 0

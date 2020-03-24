@@ -33,8 +33,10 @@ public class EnemyController : MonoBehaviour
         BottomDestroy();
         if (enemyHealth <= 0)
         {
-            SpawnScores();
-            Destroy(gameObject);
+            DropScores();
+            DropBox();
+            //DropHealth();
+            Destroy(this.gameObject);
         }
     }
 
@@ -54,13 +56,33 @@ public class EnemyController : MonoBehaviour
         transform.Translate(Vector3.forward * Time.deltaTime * enemy.speed);
     }
 
-    private void SpawnScores()
+    private void DropScores()
     {
         for (int i = 0; i < enemy.scoresAmountDrop; i++)
         {
             Instantiate(enemy.dropObjects[0], new Vector3(gameObject.transform.position.x + Random.Range(0, 1f),
                 gameObject.transform.position.y, gameObject.transform.position.z + Random.Range(0, 1f)),
                 Quaternion.Euler(0, Random.Range(0, 360), 0));
+        }
+    }
+
+    private void DropBox()
+    {
+        float random = Random.Range(0, 100);
+        if(random < enemy.dropBoxChance)
+        {
+            Instantiate(enemy.dropObjects[1], new Vector3(gameObject.transform.position.x, 
+                gameObject.transform.position.y+1, gameObject.transform.position.z), Quaternion.identity);
+        }
+    }
+
+    private void DropHealth()
+    {
+        float random = Random.Range(0, 100);
+        if (random < enemy.dropHealthChance)
+        {
+            Instantiate(enemy.dropObjects[1], new Vector3(gameObject.transform.position.x,
+                gameObject.transform.position.y + 1, gameObject.transform.position.z), Quaternion.identity);
         }
     }
 

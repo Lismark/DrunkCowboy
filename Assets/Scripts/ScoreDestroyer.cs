@@ -10,7 +10,7 @@ public class ScoreDestroyer : MonoBehaviour
 
     private void Start()
     {
-        score = gameObject.GetComponent<DropObject>().score;
+        score = gameObject.GetComponent<DropScore>().score;
     }
 
 
