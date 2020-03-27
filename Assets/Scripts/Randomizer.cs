@@ -20,4 +20,5 @@ public static class Randomizer
         int randomItem = Random.Range(0, table.Count);
         return table[randomItem];
     }
+
 }

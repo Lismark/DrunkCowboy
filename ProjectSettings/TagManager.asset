@@ -10,6 +10,7 @@ TagManager:
   - Score
   - DestroyPoint
   - Enemy
+  - Loot
   layers:
   - Default
   - TransparentFX
@@ -25,9 +26,9 @@ TagManager:
   - Bullets
   - Buffs
   - Scores
-  - 
-  - 
-  - 
+  - Loot
+  - Player
+  - Enemies
   - 
   - 
   - 

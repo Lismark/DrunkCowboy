@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3094366604304206673}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BulletSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5429994263652450558}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Shoulder_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5429994263652383492}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Neck_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5429994263652408186}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Arm_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5429994263652428386}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Forearm_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5429994263652373368}
   - component: {fileID: 5429994263658032512}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: SF_Character_Farmer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5429994263652430570}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Shoulder_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,7 +300,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5429994263652437792}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Toe_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -330,7 +330,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5429994263652465242}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Forearm_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -362,7 +362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5429994263652419970}
   - component: {fileID: 5429994263657962416}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: SF_Character_Wrangler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -467,7 +467,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5429994263652450860}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Arm_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -498,7 +498,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5429994263652377654}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Toe_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -528,7 +528,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5429994263652449934}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Foot_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -559,7 +559,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5429994263652449972}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LowerLeg_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -590,7 +590,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5429994263652449974}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: UpperLeg_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -621,7 +621,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5429994263652449948}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Hand_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -651,7 +651,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5429994263652449926}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Hand_Left_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -681,7 +681,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5429994263652449968}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Foot_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -712,7 +712,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5429994263652449970}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LowerLeg_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -743,7 +743,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5429994263652449976}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: UpperLeg_Right_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -774,7 +774,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5429994263652449924}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Head_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -804,7 +804,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5429994263652449932}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Spine_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -835,7 +835,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5429994263652449946}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Hips_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -870,9 +870,11 @@ GameObject:
   - component: {fileID: 5429994263652449982}
   - component: {fileID: 5429994263662252400}
   - component: {fileID: 5429994263135664257}
-  m_Layer: 0
+  - component: {fileID: 7714224046670094431}
+  - component: {fileID: 1953138154}
+  m_Layer: 15
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -928,16 +930,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c2f2f396dce1d646985f5671e25c925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefabs: []
+  bulletPrefabs:
+  - {fileID: 765401764740370233, guid: 7d3a8bfd1aeacb745a3e2636c7e84268, type: 3}
+  - {fileID: 100000, guid: 06cdf427476835b42837c1ca7f8cdbd1, type: 3}
   bulletSpawnPoint: {fileID: 2078969943708472357}
-  animator: {fileID: 0}
-  playerType: {fileID: 0}
+  player: {fileID: 11400000, guid: 49635ecc4c3cc64459a50ac17e02d5bd, type: 2}
+  animator: {fileID: 5429994263662252400}
   healthBarSlider: {fileID: 0}
-  penaltyMultiplyer: 2
   borders: {fileID: 11400000, guid: 44322527b2a417445a4923f748d8bb12, type: 2}
-  currentBullet: 0
-  shooting: 0
+  currentBulletType: 0
+  shooting: 1
   shootingType: 0
+--- !u!114 &7714224046670094431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5429994263652737758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3714d25e2b44dbb438fd3b78db1fd6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cells:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  items: []
+--- !u!65 &1953138154
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5429994263652737758}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5429994263652740734
 GameObject:
   m_ObjectHideFlags: 0
@@ -947,7 +993,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5429994263652410624}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Spine_jnt 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -979,7 +1025,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5429994263652437772}
   - component: {fileID: 5429994263657955396}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: SF_Character_FarmersWife
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1083,7 +1129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5429994263652384284}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Chest_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1117,7 +1163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5429994263652417892}
   - component: {fileID: 5429994263658011190}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: SF_Character_FarmersDaughter
   m_TagString: Untagged
   m_Icon: {fileID: 0}

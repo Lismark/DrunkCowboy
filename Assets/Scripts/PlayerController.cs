@@ -7,10 +7,9 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private GameObject[] bulletPrefabs;
     [SerializeField] private GameObject bulletSpawnPoint;
+    [SerializeField] private Player player;
     [SerializeField] Animator animator;
-    [SerializeField] Player playerType;
     [SerializeField] GameObject healthBarSlider;
-    [SerializeField] private int penaltyMultiplyer = 2;
     [SerializeField] Borders borders;
 
     public int currentBulletType = 0;
@@ -19,12 +18,10 @@ public class PlayerController : MonoBehaviour
     private float _horizontalInput;
     private float nextFire;
     private float hpSliderValue;
-    private float maxHealth;
 
     private void Start()
     {
         hpSliderValue = healthBarSlider.GetComponent<Slider>().value;
-        maxHealth = playerType.maxHealth;
     }
 
     void FixedUpdate()
@@ -53,7 +50,7 @@ public class PlayerController : MonoBehaviour
     {
         if(shooting && Time.time > nextFire)
         {
-            nextFire = Time.time + playerType.fireRate;
+            nextFire = Time.time + player.fireRate;
         var bullet = Instantiate(bulletPrefabs[currentBulletType], bulletSpawnPoint.transform.position, Quaternion.identity);
         animator.SetTrigger("Throw");
         }
@@ -63,7 +60,7 @@ public class PlayerController : MonoBehaviour
     {
         if (shooting && Time.time > nextFire)
         {
-            nextFire = Time.time + playerType.fireRate;
+            nextFire = Time.time + player.fireRate;
             Instantiate(bulletPrefabs[currentBulletType], bulletSpawnPoint.transform.position, Quaternion.identity);
             Instantiate(bulletPrefabs[currentBulletType], bulletSpawnPoint.transform.position, Quaternion.Euler(0,10,0));
             Instantiate(bulletPrefabs[currentBulletType], bulletSpawnPoint.transform.position, Quaternion.Euler(0, -10, 0));
@@ -75,7 +72,7 @@ public class PlayerController : MonoBehaviour
     {
         if (shooting && Time.time > nextFire)
         {
-            nextFire = Time.time + playerType.fireRate;
+            nextFire = Time.time + player.fireRate;
             var bullet = Instantiate(bulletPrefabs[currentBulletType], bulletSpawnPoint.transform.position, Quaternion.identity);
             bullet.transform.localScale = new Vector3(4,4,4);
             animator.SetTrigger("Throw");
@@ -93,5 +90,13 @@ public class PlayerController : MonoBehaviour
 
         if (transform.position.x >= borders.rightBorder)
             transform.position = new Vector3(borders.rightBorder, transform.position.y, transform.position.z);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Buff"))
+        {
+            Destroy(other.gameObject);
+        }
     }
 }    

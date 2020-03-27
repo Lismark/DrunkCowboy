@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4343637278982870688}
   - component: {fileID: 5280616492951378702}
   - component: {fileID: 8084332138712864655}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 5050674613023604349}
   - component: {fileID: 625143214973991800}
   - component: {fileID: 7234488045872984939}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: HpBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3497085122746087883}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: ChickRig_Tail_AuxSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,7 +211,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3497085122746119669}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: ChickRig_SHJntGrp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3497085122746078419}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: ChickRig_FootR_AuxSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -272,7 +272,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3497085122746064299}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: ChickRig_ROOTSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,7 +306,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3497085122746070187}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: ChickRig_Head_AuxSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -336,7 +336,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3497085122746027043}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: ChickRig_r_Leg_AuxSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -367,7 +367,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3497085122746090579}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: ChickRig_l_Leg_AuxSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -399,7 +399,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3497085122746011717}
   - component: {fileID: 3497085122740568491}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: SA_Animal_Chick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -487,7 +487,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3497085122746045225}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: ChickRig_FootL_AuxSHJnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -521,7 +521,7 @@ GameObject:
   - component: {fileID: -3825960642888281285}
   - component: {fileID: 3592039269558347790}
   - component: {fileID: -6368997903339093747}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Animal_Chick
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -592,7 +592,7 @@ MonoBehaviour:
   healthBar: {fileID: 3431108777484129567}
   pooScore: {fileID: 0}
   borders: {fileID: 11400000, guid: 44322527b2a417445a4923f748d8bb12, type: 2}
-  player: {fileID: 11400000, guid: 4edba9c1e8ddd3f42aa595da5134095f, type: 2}
+  player: {fileID: 11400000, guid: 49635ecc4c3cc64459a50ac17e02d5bd, type: 2}
 --- !u!114 &-6368997903339093747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -631,7 +631,7 @@ GameObject:
   - component: {fileID: 2928483304328082449}
   - component: {fileID: 4818467646908530635}
   - component: {fileID: 3431108777484129567}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Handler
   m_TagString: Untagged
   m_Icon: {fileID: 0}

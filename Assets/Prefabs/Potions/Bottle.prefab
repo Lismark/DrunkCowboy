@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7107398870980620430}
   - component: {fileID: 2472182563327702662}
-  - component: {fileID: 2147629326934800166}
   - component: {fileID: 5460684692938960048}
   - component: {fileID: 3034717534980855028}
+  - component: {fileID: -4166882541725965928}
+  - component: {fileID: -330072592304398860}
   m_Layer: 12
   m_Name: Bottle
   m_TagString: Buff
@@ -48,22 +49,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
---- !u!114 &2147629326934800166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7107398870980620416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 650542a0b42aa8147895efa2a43f46f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buff: {fileID: 11400000, guid: cc2bf012dc2ab914e9c8cdd1d85f1705, type: 2}
-  particle: {fileID: 0}
-  objectBuffType: 0
-  borders: {fileID: 11400000, guid: 44322527b2a417445a4923f748d8bb12, type: 2}
 --- !u!54 &5460684692938960048
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -93,6 +78,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5937539, y: 1.0254829, z: 0.57308304}
   m_Center: {x: 0.0034427345, y: 0.98360074, z: 0}
+--- !u!114 &-4166882541725965928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7107398870980620416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a52bd68cb8b62e4a8a84cb8fd546313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 1
+  spawnChanceWeigth: 5
+--- !u!114 &-330072592304398860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7107398870980620416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81120aefec846e4ea94745b145d1352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pot: {fileID: 11400000, guid: 8c998f76d36291741a38576d518d3119, type: 2}
+  player: {fileID: 11400000, guid: 49635ecc4c3cc64459a50ac17e02d5bd, type: 2}
 --- !u!1001 &2869034226707604059
 PrefabInstance:
   m_ObjectHideFlags: 0

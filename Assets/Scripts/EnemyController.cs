@@ -25,7 +25,6 @@ public class EnemyController : MonoBehaviour
 
         fullHealth = enemy.health;
         enemyHealth = fullHealth;
-        damageModifier = FindObjectOfType<BuffReciever>().buffDamage;
     }
     void FixedUpdate()
     {
@@ -76,15 +75,15 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    private void DropHealth()
-    {
-        float random = Random.Range(0, 100);
-        if (random < enemy.dropHealthChance)
-        {
-            Instantiate(enemy.dropObjects[1], new Vector3(gameObject.transform.position.x,
-                gameObject.transform.position.y + 1, gameObject.transform.position.z), Quaternion.identity);
-        }
-    }
+    //private void DropHealth()
+    //{
+    //    float random = Random.Range(0, 100);
+    //    if (random < enemy.dropHealthChance)
+    //    {
+    //        Instantiate(enemy.dropObjects[1], new Vector3(gameObject.transform.position.x,
+    //            gameObject.transform.position.y + 1, gameObject.transform.position.z), Quaternion.identity);
+    //    }
+    //}
 
     private void BottomDestroy()
     {
@@ -92,7 +91,7 @@ public class EnemyController : MonoBehaviour
         {
             if (gameObject.CompareTag("Enemy"))
             {
-                player.currentHealth -= enemy.damage;
+                player.CurrentHealth -= enemy.damage;
             }
             Destroy(gameObject);
         }

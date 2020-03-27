@@ -7,6 +7,8 @@ public class LootBox : MonoBehaviour
 {
     [SerializeField] private float lifeTime;
     [SerializeField] GameObject counterObject;
+    [SerializeField] Sprite icon;
+    [SerializeField] Inventory inventory;
 
     private Image counterImage;
     private float timeLeft;
@@ -33,6 +35,7 @@ public class LootBox : MonoBehaviour
 
     public void ClickDestroy()
     {
+        inventory.AddToInventory(gameObject);
         Destroy(gameObject);
     }
 }

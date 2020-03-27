@@ -2,10 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "newPlayer", menuName ="PlayerType/Player")]
+[CreateAssetMenu(fileName ="NewPlayer",menuName ="Player/NewPlayer")]
 public class Player : ScriptableObject
 {
-    public int maxHealth;
-    public int currentHealth;
+    [SerializeField] private float maxHealth;
+    public float MaxHealth
+    {
+        get { return maxHealth; }
+    }
     public float fireRate;
+    private float currentHealth;
+    public float CurrentHealth
+    {
+        get { return currentHealth; }
+        set { currentHealth = value; }
+    }
 }

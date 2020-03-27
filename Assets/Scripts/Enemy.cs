@@ -3,13 +3,20 @@
 
 public class Enemy : Randomable
 {
-    public int index;
     public string enemyName;
+    public int index;
     public int spawnChanceWeigth;
-    public override int SpawnChanceWeigth 
-    {
+
+    public override int SpawnChanceWeigth {
         get { return spawnChanceWeigth; }
+        set { spawnChanceWeigth = value; }
     }
+    public override int Index
+    {
+        get { return index; }
+        set { index = value; }
+    }
+
     public int damage;
     public int speed;
     public int scoresAmountDrop;
