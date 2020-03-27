@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: HealingPotion
   m_EditorClassIdentifier: 
   addAmount: 10
-  spawnChance: 15
+  spawnChance: 5

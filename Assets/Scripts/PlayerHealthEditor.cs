@@ -27,5 +27,7 @@ public class PlayerHealthEditor : MonoBehaviour
             Time.timeScale = Mathf.Lerp(1f,0f, .1f * Time.deltaTime);   // постепенно замедляет время // таймскейл лучше вынести в скриптабл
         }
         slider.value = player.CurrentHealth / player.MaxHealth;
+        if (player.CurrentHealth > player.MaxHealth)
+            player.CurrentHealth = player.MaxHealth;
     }
 }

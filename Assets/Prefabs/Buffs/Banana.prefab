@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 650542a0b42aa8147895efa2a43f46f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buff: {fileID: 11400000, guid: 69482871a24b72242ac5a67d2d8d037c, type: 2}
+  buff: {fileID: 11400000, guid: cc2bf012dc2ab914e9c8cdd1d85f1705, type: 2}
   particle: {fileID: 0}
   objectBuffType: 0
   borders: {fileID: 11400000, guid: 44322527b2a417445a4923f748d8bb12, type: 2}

@@ -11,6 +11,7 @@ TagManager:
   - DestroyPoint
   - Enemy
   - Loot
+  - Pot
   layers:
   - Default
   - TransparentFX

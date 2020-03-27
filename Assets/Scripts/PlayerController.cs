@@ -94,7 +94,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Buff"))
+        if(other.CompareTag("Buff") || other.CompareTag("Pot"))
         {
             Destroy(other.gameObject);
         }

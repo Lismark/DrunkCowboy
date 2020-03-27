@@ -8,6 +8,6 @@ public class MoveForward : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.Translate(Vector3.forward * Time.deltaTime * speed);
+        transform.Translate(Vector3.back * Time.deltaTime * speed);
     }
 }
